@@ -59,3 +59,4 @@ gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem "paperclip", "~> 5.2.1"
