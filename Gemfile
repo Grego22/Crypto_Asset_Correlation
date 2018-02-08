@@ -59,4 +59,6 @@ gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'turbolinks', '~> 5.0.0'
+
 gem "paperclip", "~> 5.2.1"
