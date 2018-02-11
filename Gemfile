@@ -54,9 +54,9 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'bootstrap-generators', git: 'https://github.com/gstark/bootstrap-generators', branch: 'includes-simplified-controller-scaffold'
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'turbolinks', '~> 5.0.0'
+gem 'bootstrap', '~> 4.0.0'
