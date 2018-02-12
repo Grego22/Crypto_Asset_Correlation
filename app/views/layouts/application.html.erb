@@ -6,9 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('stocks.jpeg'), :rel => 'icon', :type =>  'image/jpeg' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="site-wrapper">
+     <div class="site-wrapper-inner">
+      <div class="cover-container">
+
+        <%= render "shared/nav" %>
+
+       <%= yield %>
+
+      </div>
+    </div>
+   </div>
   </body>
 </html>
