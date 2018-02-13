@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Ideas
+  *  Real time stock charts vs trading view widget
+  * data table (editable)
