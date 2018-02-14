@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :set_page_defaults
   def set_page_defaults
     @page_title = "Risk On vs Risk Off"
-    @seo_keywords "Greg Garville Asset"
+    @seo_keywords = "Greg Garville Asset"
   end
 
 
