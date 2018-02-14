@@ -14,5 +14,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require popper
+@import 'datatables.js'
+
 
 @import 'jquery';@import 'jquery_ujs';
+
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
