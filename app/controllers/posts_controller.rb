@@ -3,9 +3,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @page_title = "Weekly Charts"
   end
 
   def show
+    @post = Post.includes(:comments).find(params[:id])
+    @comment = Comment.new
     @page_title = @post.title
     @seo_keywords = @post.body
   end
