@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @page_title = @post.title
+    @seo_keywords = @post.body
   end
 
   def new
