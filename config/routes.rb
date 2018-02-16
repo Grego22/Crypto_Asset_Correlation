@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :comments
   get 'pages/home'
 
   get 'pages/weekly'
