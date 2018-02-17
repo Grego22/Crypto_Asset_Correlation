@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   get 'pages/weekly'
 
-  get 'pages/stats'
+  get 'stats', to: 'pages#stats'
 
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
 
   devise_for :admins
   resources :posts

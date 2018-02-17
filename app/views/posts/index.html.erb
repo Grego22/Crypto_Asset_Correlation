@@ -1,32 +1,39 @@
-<div class="col-sm-8 blog-main">
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="col-sm-8 blog-main">
+    <p id="notice"><%= notice %></p>
 
-<h1>Daily Chart</h1>
+    <h1>Daily Chart</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <%= render 'shared/navbar' %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <!--<td><%= link_to 'Show', post %></td>-->
-        <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>-->
-        <!--<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= (post.body).truncate(150) %></td>
+            <td><%=image_tag post.avatar, width: '100%' %></td>
+            <!--<td><%= link_to 'Show', post %></td>-->
+            <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>-->
+           <td> <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<%= link_to fa_icon('plus-circle'), new_post_path %>
+    <br>
 
+    <%= link_to fa_icon('plus-circle'), new_post_path %>
+
+
+      <%= render 'shared/footer' %>
+  </div>
 </div>
