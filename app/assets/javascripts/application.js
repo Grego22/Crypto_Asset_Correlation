@@ -14,6 +14,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require popper
+//= require bootstrap
+//= require_tree .
 @import 'datatables.js'
 
 
