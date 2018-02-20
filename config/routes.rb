@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :comments
   get 'pages/home'
 
   get 'pages/weekly'
@@ -10,7 +9,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   devise_for :admins
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   root 'pages#home'
 end
