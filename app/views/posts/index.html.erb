@@ -9,7 +9,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
               <% @posts.each do |post| %>
             <h1 class="mt-4"> <%= post.title %></h1>
-             <a href= "<%=post_url(post)%>"<td><%=image_tag post.avatar, width: '50%' %></td></a>
+             <a href= "<%=post_url(post)%>"><%=image_tag post.avatar, width: '50%' %></a>
             <div class="col-lg-8"> <%= (post.body).truncate(150) %></div>
             <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>

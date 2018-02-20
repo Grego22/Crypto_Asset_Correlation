@@ -1,13 +1,24 @@
 class CommentsController < ApplicationController
+  before_action :find_post
   def create
-    @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    @comment.admin_id =current_admin.id
+    @comment.save
+
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      render 'new'
+    end
   end
 
   private
 
   def comment_params
     params.require(:comment).permit(:content)
+  end
+
+  def find_post
+    @post = Post.find(params[:post_id])
   end
 end

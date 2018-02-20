@@ -4,8 +4,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :name
 
   has_many :comments, dependent: :destroy
-
+  has_many :posts
 end
