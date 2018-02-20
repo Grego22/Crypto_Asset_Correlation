@@ -2,17 +2,16 @@
   <!--<div class="col-sm-8 blog-main">-->
     <!--<p id="notice"><%= notice %></p>-->
 
-    <h1>Daily Chart</h1>
 
-      <%= render 'shared/navbar' %>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
               <% @posts.each do |post| %>
-                  <%= post.title %>
-                  <%= (post.body).truncate(150) %>
-                  <a href="<%=post_url(post)%>"<td><%=image_tag post.avatar, width: '50%' %></td></a>
-                 <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <h1 class="mt-4"> <%= post.title %></h1>
+             <a href= "<%=post_url(post)%>"<td><%=image_tag post.avatar, width: '50%' %></td></a>
+            <div class="col-lg-8"> <%= (post.body).truncate(150) %></div>
+            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
               <% end %>
         </div>
       </div>
