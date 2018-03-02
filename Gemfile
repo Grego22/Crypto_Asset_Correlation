@@ -63,3 +63,4 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem "mini_magick"
+gem 'coffee-rails'
