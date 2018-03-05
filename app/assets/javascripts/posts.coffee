@@ -14,3 +14,7 @@ jQuery(document).on 'turbolinks:load', ->
   $('#new_comment').submit (e) ->
     $this = $(this)
     textarea = $this.find('#comment_content')
+    if $.trim(textarea.val()).length > 1
+      App.global_chat.send_comment textarea(),
+        comments.data('post-id')
+      textarea.val('')
