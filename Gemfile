@@ -64,5 +64,6 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem "mini_magick"
 gem 'coffee-rails'
+gem "redis", "~> 3.0.1"
 
 gem 'bootsnap', require: false

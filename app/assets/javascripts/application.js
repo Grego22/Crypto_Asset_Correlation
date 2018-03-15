@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require popper
 //= require bootstrap
+//= require cable
 //= require_tree .
 @import 'datatables.js'
 
